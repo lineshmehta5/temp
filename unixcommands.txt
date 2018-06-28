@@ -1,0 +1,1823 @@
+    1  cd workspace/
+    2  ls
+    3  cd assignment-submission/
+    4  ./gradlew cloudNativeDeveloperSimpleApp -PserverUrl=http://pal-tracker-lm.apps.cumuluslabs.io
+    5  ./gradlew cloudNativeDeveloperCloudFoundry -PserverUrl=http://pal-tracker-lm.apps.cumuluslabs.io
+    6  ls -la ../pal-tracker/
+    7  /gradlew cloudNativeDeveloperPipelines -PreviewUrl=https://lm-pal-tracker-review.apps.cumuluslabs.io -PproductionUrl=https://lm-pal-tracker.apps.cumuluslabs.io
+    8  ls
+    9  ./gradlew cloudNativeDeveloperPipelines -PreviewUrl=https://lm-pal-tracker-review.apps.cumuluslabs.io -PproductionUrl=https://lm-pal-tracker.apps.cumuluslabs.io
+   10  ./gradlew cloudNativeDeveloperRest -PserverUrl=https:http://lm-pal-tracker-review.apps.cumuluslabs.io/
+   11  ./gradlew cloudNativeDeveloperRest -PserverUrl=https://lm-pal-tracker-review.apps.cumuluslabs.io/
+   12  ./gradlew cloudNativeDeveloperRest -PserverUrl=https://lm-pal-tracker-review.apps.cumuluslabs.io/
+   13  history
+   14  cd workspace/
+   15  ls
+   16  cd pal-tracker/
+   17  ./gradlew bootRun
+   18  ./gradlew bootRun
+   19  clear
+   20  git status
+   21  git diff
+   22  git add .
+   23  git commit -m "Refactoring"
+   24  git push
+   25  git cherry-pick migration-start
+   26  mkdir -p databases/tracker
+   27  cd databases/tracker/;touch create_databases.sql
+   28  msql -u root
+   29  mysql -u root
+   30  mysql.server start
+   31  mysql -u root
+   32  mysql
+   33  mysql -uroot < databases/tracker/create_databases.sql
+   34  pwd
+   35  cd ..
+   36  ls
+   37  cd ..
+   38  ls
+   39  mysql -uroot < databases/tracker/create_databases.sql
+   40  flyway -url="jdbc:mysql://localhost:3306/tracker_dev" -locations=filesystem:databases/tracker clean migrate
+   41  flyway -url="jdbc:mysql://localhost:3306/tracker_test" -locations=filesystem:databases/tracker clean migrate
+   42  flyway -url="jdbc:mysql://localhost:3306/tracker_test" -locations=filesystem:databases/tracker clean migrate
+   43  flyway -url="jdbc:mysql://localhost:3306/tracker_test" -locations=filesystem:databases/tracker clean migrate
+   44  flyway -url="jdbc:mysql://localhost:3306/tracker_test" -locations=filesystem:databases/tracker clean migrate
+   45  msql -u root
+   46  mysql -u root
+   47  flyway -url="jdbc:mysql://localhost:3306/tracker_test" -locations=filesystem:databases/tracker clean migrate
+   48  cd /Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist 
+   49  ls /Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist 
+   50  ls /Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist 
+   51  ls -l /Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist 
+   52  cf target -s review
+   53  cf target -s review
+   54  cf target -s review
+   55  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   56  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   57  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   58  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   59  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   60  git status
+   61  git add .
+   62  git commit -m "DB Migration Excercise"
+   63  git push
+   64  git status
+   65  git add .
+   66  git commit -m "Corrected App Name"
+   67  git push
+   68  cf apps
+   69  ls -la
+   70  cf push -f manifest-review.yml 
+   71  cf logs pal-tracker --recent
+   72  ./gradlew clean build
+   73  cf push -f manifest-review.yml 
+   74  cf target -t -s production
+   75  cf target -s production
+   76  cf push -f manifest-production.yml 
+   77  cf target -s sandbox
+   78  cf push -f manifest-sandbox.yml 
+   79  git status
+   80  git add .
+   81  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   82  git status
+   83  git commit -m "Add Pipeline for Sandbox"
+   84  git push
+   85  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   86  git status
+   87  git add .
+   88  git commit -m "Update pipeline"
+   89  git push
+   90  fly -t pal-concourse destroy-pipeline -p pal-tracker
+   91  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   92  fly -t pal-concourse unpause-pipeline -p pal-tracker
+   93  git status
+   94  ls
+   95  mkdir dump
+   96  cd dump
+   97  touch dump1.tmp
+   98  cd ..
+   99  ls
+  100  git add .
+  101  git commit -m "to trigger build"
+  102  git push
+  103  git status
+  104  fly -t pal-concourse destroy-pipeline -p pal-tracker
+  105  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+  106  fly -t pal-concourse unpause-pipeline -p pal-tracker
+  107  fly -t pal-concourse destroy-pipeline -p pal-tracker
+  108  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+  109  fly -t pal-concourse unpause-pipeline -p pal-tracker
+  110  fly -t pal-concourse destroy-pipeline -p pal-tracker
+  111  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+  112  fly -t pal-concourse unpause-pipeline -p pal-tracker
+  113  clear
+  114  git status
+  115  git add .
+  116  git commit -m "Update pipeline"
+  117  git push
+  118  git cherry-pick jdbc-start
+  119  ./gradlew clean build
+  120  git status
+  121  git add .
+  122  git commit -m "JDBC Assignment"
+  123  git push
+  124  ./gradlew clean build
+  125  git status
+  126  ls
+  127  cd dump/
+  128  ls
+  129  touch dump2.tmp
+  130  cd ..
+  131  git add .
+  132  git commit -m "commit to trigger build"
+  133  cf target -s production
+  134  cf logs pal-tracker 
+  135  git log
+  136  git push
+  137  git cherry-pick actuator-start
+  138  ./gradlew clean build
+  139  ./gradlew clean build
+  140  cf target
+  141  cf set-env pal-tracker MANAGEMENT_SECURITY_ENABLED false
+  142  cf restage pal-tracker
+  143  cf restage pal-tracker
+  144  mysql.server start
+  145  cd workspace/pal-tracker-distributed/
+  146  cf push -f manifest-registration.yml 
+  147  cf push -f manifest-registration.yml 
+  148  cd workspace/pal-tracker-distributed/
+  149  cf push manifest-backlog.yml 
+  150  cd workspace/pal-tracker-distributed/
+  151  cf push manifest-backlog.yml 
+  152  cf push -f manifest-backlog.yml 
+  153  cf push -f manifest-registration.yml.yml 
+  154  cf push -f manifest-registration.yml
+  155  git status
+  156  cf push -f manifest-registration.yml
+  157  cd workspace/pal-tracker-distributed/
+  158  ./gradlew platform-services:eureka-server:bootRun
+  159  cd workspace/pal-tracker-distributed/
+  160  ./gradlew platform-services:eureka-server:bootRun
+  161  ./gradlew platform-services:eureka-server:bootRun
+  162  git status
+  163  git status
+  164  git add .
+  165  git status
+  166  pwd
+  167  git add *
+  168  git status
+  169  git status
+  170  git status
+  171  git add .
+  172  git commit -m "Missing files pushed";git push
+  173  ls -la
+  174  clear
+  175  ls
+  176  cd workspace/
+  177  ls
+  178  cd pal-tracker-distributed/
+  179  clear
+  180  ./gradlew clean build
+  181  ./gradlew clean build
+  182  ./gradlew clean build
+  183  ./gradlew clean build
+  184  git status
+  185  git status
+  186  ./gradlew clean build
+  187  git status
+  188  git status
+  189  git add .
+  190  git status
+  191  git commit -m "OAuth Added"
+  192  git push
+  193  cf m
+  194  git status
+  195  git add .
+  196  git commit -m "OAuth Added, Manifest Files Updated"
+  197  git push
+  198  git status
+  199  git status
+  200  git commit -m "OAuth Added, Manifest Files Updated"
+  201  git add .
+  202  git commit -m "OAuth Added, Manifest Files Updated"
+  203  git push
+  204  ./gradlew clean build
+  205  git status
+  206  vi ci/dump.tmp 
+  207  history
+  208  cf logs tracker-timesheets --recent
+  209  ls
+  210  cf push -f manifest-timesheets.yml 
+  211  cf logs tracker-timesheets --recent
+  212  git status
+  213  git status
+  214  git add .; git commit -m "Add props for reg server endpoint"
+  215  git push
+  216  cf push -f manifest-timesheets.yml 
+  217  cf push -f manifest-timesheets.yml 
+  218  cf push -f manifest-timesheets.yml 
+  219  ./gradlew clean build;
+  220  ./gradlew clean build;
+  221  git status
+  222  git diff
+  223  git diff
+  224  git status
+  225  git add .;git commit -m "Auth Server";git push;
+  226  ./gradlew clear build
+  227  ./gradlew clean build
+  228  ./gradlew clean build
+  229  git add .;git commit -m "Auth Server";git push;
+  230  ./gradlew clean build
+  231  git log
+  232  git log | grep 0579df9b681c501bca074c38323363467c061a61
+  233  git status
+  234  git add .
+  235  git commit -m "Refactoring"
+  236  git push
+  237  git status
+  238  git add .
+  239  git commit -m "Break Build with Wrong SSO Version in Build.gradle"
+  240  git push
+  241  cd ..
+  242  git clone https://github.com/lineshmehta5/tracker-config.git
+  243  ls
+  244  cd tracker-config/
+  245  git init
+  246  git remote add origin git@github.com:lineshmehta5/tracker-config.git
+  247  touch application.properties
+  248  vi application.properties 
+  249  registration.server.endpoint=http://registration-server
+  250  security.user.name=actuator
+  251  clear
+  252  git add .; git commit -m "Add Props"; git push
+  253  cd ..
+  254  cd ~/Downloads/
+  255  ls
+  256  ls -la
+  257  cd apache-tomee-webprofile-7.0.4/
+  258  ls
+  259  clear
+  260  ./bin/catalina.sh run
+  261  exit
+  262  cd workspace/assignment-submission/
+  263  ./gradlew cloudNativeDeveloperDistributedSystemWithSecurity     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/
+  264  ./gradlew cloudNativeDeveloperDistributedSystemWithSecurity     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/
+  265  ./gradlew cloudNativeDeveloperDistributedSystemWithSecurity     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/     -PactuatorUsername=actuator     -PactuatorPassword=operations4red
+  266  ./gradlew cloudNativeDeveloperDistributedSystemWithConfigServer     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/     -PactuatorUsername=actuator     -PactuatorPassword=operations4red
+  267  ./gradlew replatformingSpringBootification -PmovieFunUrl=https://moviefun-sleepy-wolf.apps.cumuluslabs.io
+  268  ./gradlew replatformingManagingDataSources -PmovieFunUrl=https://moviefun-sleepy-wolf.apps.cumuluslabs.io
+  269  ./gradlew replatformingManagingDataSources -PmovieFunUrl=https://moviefun-sleepy-wolf.apps.cumuluslabs.io
+  270  ./gradlew replatformingRemovingReadsFromFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  271  ./gradlew replatformingRemovingReadsFromFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  272  ./gradlew replatformingRemovingReadsFromFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  273  cd ~/workspace/assignment-submission
+  274  ./gradlew replatformingRemovingPersistenceToFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  275  ./gradlew replatformingLogging -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  276  ./gradlew replatformingBackgroundJobsWithDb -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  277  ./gradlew replatformingBackgroundJobsWithDb -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  278  ./gradlew r replatformingBackgroundJobsWithAmqp -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  279  ./gradlew replatformingBackgroundJobsWithAmqp -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  280  netstat -a
+  281  netstat -a > ports.txt
+  282  ifconfig
+  283  cd workspace/apps-movie-fun-modernization-code/
+  284  ./gradlew build
+  285  ./gradlew clean build
+  286  cd ~/workspace/assignment-submission;./gradlew modernizationMavenToGradle -PmovieFunUrl=http://localhost:8080
+  287  cd ~/workspace/assignment-submission;./gradlew modernizationMavenToGradle -PmovieFunUrl=https://localhost:8080
+  288  cd ~/workspace/assignment-submission;./gradlew modernizationMavenToGradle -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  289  cd ~/workspace/assignment-submission;./gradlew modernizationMultipleJars -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  290  brew install docker
+  291  cd ..
+  292  git clone cf push movie-fun-app -p applications/movie-fun-app/build/libs/movie-fun-app-1.1.0-SNAPSHOT.war --no-start --random-route
+  293  git clone https://github.com/lineshmehta5/k8s-mastery.git
+  294  cd k8s-mastery/
+  295  ls -l
+  296  ls
+  297  cd sa-frontend/
+  298  npm install
+  299  brew install npm
+  300  npm install
+  301  npm start
+  302  ps -ef|grep 8080
+  303  lsof
+  304  fuser 8080/tcp
+  305  lsof -i:8080
+  306  kill -9 6961 6962
+  307  lsof -i:8080
+  308  vlrst
+  309  clear
+  310  ./gradlew bootRun --parallel
+  311  pwd
+  312  cd ..
+  313  cd ..
+  314  cd apps-movie-fun-modernization-code/
+  315  ./gradlew bootRun --parallel
+  316  echo "source ~/workspace/apps-movie-fun-modernization-code/.env" >> ~/.bashrc
+  317  source ~/.bashrc
+  318  env
+  319  ./gradlew bootRun --parallel
+  320  cd ..
+  321  cd new/
+  322  cd apps-movie-fun-modernization-code/
+  323* 
+  324  ./gradlew bootRun --parallel
+  325  env
+  326  /usr/local/bin/idea .
+  327  lsof -i:8080
+  328  lsof -i:8081
+  329  lsof -i:8082
+  330  ./gradlew bootRun --parallel
+  331  clear
+  332  ./gradlew bootRun --parallel
+  333  ./gradlew bootRun application:album-service
+  334  ./gradlew application:album-service:bootRun
+  335  ./gradlew application:album-service:bootRun &
+  336  ./gradlew application:album-service:bootRun &
+  337  ps -ef|grep java
+  338  pkill java
+  339  ps -ef|grep java
+  340  clear
+  341  ps -ef|grep java
+  342  pkill java
+  343  ps -ef|grep java
+  344  kill -9 13068 13083 13113
+  345  ps -ef|grep java
+  346  ps -ef|grep java
+  347* 
+  348  ps -ef|grep java
+  349  clear
+  350  ./gradlew application:album-service:bootRun &
+  351  ps -ef|grep java
+  352  pkill java
+  353  ps -ef|grep java
+  354  kill -9 13127
+  355  ps -ef|grep java
+  356  kill -9 13127
+  357  ps -ef|grep java
+  358  clear
+  359  ps -ef|grep java
+  360  pkill java
+  361  ps -ef|grep java
+  362  mysql -u root
+  363  source ~/.bashrc
+  364  env
+  365  ./gradlew bootRun --parallel
+  366  pwd
+  367  ./gradlew clean bootRun --parallel
+  368  ./gradlew clean bootRun --parallel
+  369  ./gradlew clean bootRun --parallel
+  370  ./gradlew clean bootRun --parallel
+  371  ./gradlew clean bootRun --parallel
+  372  ./gradlew clean build -x test;cf push
+  373  git status
+  374  git diff manifest.yml 
+  375  git diff
+  376  cf restage movie-fun-app
+  377  cf restage movie-fun-app
+  378  cd ..
+  379  pwd
+  380  cd ..
+  381  ls
+  382  pwd
+  383  cd ..
+  384  ls
+  385  cd a
+  386  cd apps-movie-fun-modernization-code/
+  387  mysql -u89s5Auj1AjUsvtXl -h127.0.0.1 -P63306 -P -E
+  388  mysql -u89s5Auj1AjUsvtXl -h127.0.0.1 -P63306 -P -e"SHOW DATABASES;
+"
+  389  mysql -u89s5Auj1AjUsvtXl -h127.0.0.1 -P63306 -P -e"SHOW DATABASES;"
+  390  mysql -u89s5Auj1AjUsvtXl -h127.0.0.1 -P63306 -p5JRrnhZHLCbj7wPJ -e"SHOW DATABASES;"
+  391  cf env movie-service
+  392  clear
+  393  pwd
+  394  ./gradlew cfMigrateMovie
+  395  ./gradlew cfMigrateMovie
+  396  ./gradlew cfMigrateMovie
+  397  pwd
+  398  clear
+  399  pwd
+  400  cd ..
+  401  cd assignment-submission/
+  402  ./gradlew modernizationMigrations -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io/
+  403  ./gradlew modernizationMigrations -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io/
+  404  ./gradlew modernizationMigrations -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io/
+  405  aws s3 rm s3://cf-cf-8c4dd606-30a7-42c8-bdc4-8e1d9b16c283/ --recursive
+  406  aws s3 rm s3://cf-cf-8c4dd606-30a7-42c8-bdc4-8e1d9b16c283 / --recursive
+  407  aws configure
+  408  aws s3 rm s3://cf-cf-8c4dd606-30a7-42c8-bdc4-8e1d9b16c283 / --recursive
+  409  aws s3 rm s3://cf-cf-8c4dd606-30a7-42c8-bdc4-8e1d9b16c283/ --recursive
+  410  aws s3 rm s3://cf-8c4dd606-30a7-42c8-bdc4-8e1d9b16c283/ --recursive
+  411  aws configure
+  412  aws s3 rm s3://cf-b1ce7e99-6e56-431d-a276-1c1f1a1acad6/ --recursive
+  413  aws s3 rm s3://cf-b05b0c1a-4612-4fcb-b23f-22347b387907/ --recursive
+  414  cf delete space sandbox
+  415  cf delete-space sandbox
+  416  cf delete-space sandbox -fr
+  417  cf delete-space sandbox -f
+  418  cf delete-space review -f
+  419  cf delete-space production -f
+  420  cf delete-space sandbox -f
+  421  minio server /start
+  422  minio server 
+  423  minio server ~/shared
+  424  pwd
+  425  ./gradlew modernizationSecurity -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io
+  426  ./gradlew modernizationSecurity -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io -PuaaPassword=keepitsimple -PuaaUsername=user
+  427  ./gradlew modernizationServiceDiscovery -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io -PuaaPassword=keepitsimple -PuaaUsername=user
+  428  ./gradlew modernizationServiceDiscovery -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io -PuaaPassword=keepitsimple -PuaaUsername=user
+  429  ./gradlew modernizationConfigServer -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io -PuaaPassword=keepitsimple -PuaaUsername=user
+  430  ./gradlew modernizationCircuitBreaker -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io -PuaaPassword=keepitsimple -PuaaUsername=user
+  431  ./gradlew modernizationKotlinr -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io -PuaaPassword=keepitsimple -PuaaUsername=user
+  432  ./gradlew modernizationKotlin -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io -PuaaPassword=keepitsimple -PuaaUsername=user
+  433  history
+  434  history > ~/unixcommands.txt
+   47  flyway -url="jdbc:mysql://localhost:3306/tracker_test" -locations=filesystem:databases/tracker clean migrate
+   48  cd /Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist 
+   49  ls /Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist 
+   50  ls /Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist 
+   51  ls -l /Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist 
+   52  cf target -s review
+   53  cf target -s review
+   54  cf target -s review
+   55  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   56  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   57  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   58  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   59  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   60  git status
+   61  git add .
+   62  git commit -m "DB Migration Excercise"
+   63  git push
+   64  git status
+   65  git add .
+   66  git commit -m "Corrected App Name"
+   67  git push
+   68  cf apps
+   69  ls -la
+   70  cf push -f manifest-review.yml 
+   71  cf logs pal-tracker --recent
+   72  ./gradlew clean build
+   73  cf push -f manifest-review.yml 
+   74  cf target -t -s production
+   75  cf target -s production
+   76  cf push -f manifest-production.yml 
+   77  cf target -s sandbox
+   78  cf push -f manifest-sandbox.yml 
+   79  git status
+   80  git add .
+   81  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   82  git status
+   83  git commit -m "Add Pipeline for Sandbox"
+   84  git push
+   85  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   86  git status
+   87  git add .
+   88  git commit -m "Update pipeline"
+   89  git push
+   90  fly -t pal-concourse destroy-pipeline -p pal-tracker
+   91  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   92  fly -t pal-concourse unpause-pipeline -p pal-tracker
+   93  git status
+   94  ls
+   95  mkdir dump
+   96  cd dump
+   97  touch dump1.tmp
+   98  cd ..
+   99  ls
+  100  git add .
+  101  git commit -m "to trigger build"
+  102  git push
+  103  git status
+  104  fly -t pal-concourse destroy-pipeline -p pal-tracker
+  105  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+  106  fly -t pal-concourse unpause-pipeline -p pal-tracker
+  107  fly -t pal-concourse destroy-pipeline -p pal-tracker
+  108  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+  109  fly -t pal-concourse unpause-pipeline -p pal-tracker
+  110  fly -t pal-concourse destroy-pipeline -p pal-tracker
+  111  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+  112  fly -t pal-concourse unpause-pipeline -p pal-tracker
+  113  clear
+  114  git status
+  115  git add .
+  116  git commit -m "Update pipeline"
+  117  git push
+  118  git cherry-pick jdbc-start
+  119  ./gradlew clean build
+  120  git status
+  121  git add .
+  122  git commit -m "JDBC Assignment"
+  123  git push
+  124  ./gradlew clean build
+  125  git status
+  126  ls
+  127  cd dump/
+  128  ls
+  129  touch dump2.tmp
+  130  cd ..
+  131  git add .
+  132  git commit -m "commit to trigger build"
+  133  cf target -s production
+  134  cf logs pal-tracker 
+  135  git log
+  136  git push
+  137  git cherry-pick actuator-start
+  138  ./gradlew clean build
+  139  ./gradlew clean build
+  140  cf target
+  141  cf set-env pal-tracker MANAGEMENT_SECURITY_ENABLED false
+  142  cf restage pal-tracker
+  143  cf restage pal-tracker
+  144  mysql.server start
+  145  cd workspace/pal-tracker-distributed/
+  146  cf push -f manifest-registration.yml 
+  147  cf push -f manifest-registration.yml 
+  148  cd workspace/pal-tracker-distributed/
+  149  cf push manifest-backlog.yml 
+  150  cd workspace/pal-tracker-distributed/
+  151  cf push manifest-backlog.yml 
+  152  cf push -f manifest-backlog.yml 
+  153  cf push -f manifest-registration.yml.yml 
+  154  cf push -f manifest-registration.yml
+  155  git status
+  156  cf push -f manifest-registration.yml
+  157  cd workspace/pal-tracker-distributed/
+  158  ./gradlew platform-services:eureka-server:bootRun
+  159  cd workspace/pal-tracker-distributed/
+  160  ./gradlew platform-services:eureka-server:bootRun
+  161  ./gradlew platform-services:eureka-server:bootRun
+  162  git status
+  163  git status
+  164  git add .
+  165  git status
+  166  pwd
+  167  git add *
+  168  git status
+  169  git status
+  170  git status
+  171  git add .
+  172  git commit -m "Missing files pushed";git push
+  173  ls -la
+  174  clear
+  175  ls
+  176  cd workspace/
+  177  ls
+  178  cd pal-tracker-distributed/
+  179  clear
+  180  ./gradlew clean build
+  181  ./gradlew clean build
+  182  ./gradlew clean build
+  183  ./gradlew clean build
+  184  git status
+  185  git status
+  186  ./gradlew clean build
+  187  git status
+  188  git status
+  189  git add .
+  190  git status
+  191  git commit -m "OAuth Added"
+  192  git push
+  193  cf m
+  194  git status
+  195  git add .
+  196  git commit -m "OAuth Added, Manifest Files Updated"
+  197  git push
+  198  git status
+  199  git status
+  200  git commit -m "OAuth Added, Manifest Files Updated"
+  201  git add .
+  202  git commit -m "OAuth Added, Manifest Files Updated"
+  203  git push
+  204  ./gradlew clean build
+  205  git status
+  206  vi ci/dump.tmp 
+  207  history
+  208  cf logs tracker-timesheets --recent
+  209  ls
+  210  cf push -f manifest-timesheets.yml 
+  211  cf logs tracker-timesheets --recent
+  212  git status
+  213  git status
+  214  git add .; git commit -m "Add props for reg server endpoint"
+  215  git push
+  216  cf push -f manifest-timesheets.yml 
+  217  cf push -f manifest-timesheets.yml 
+  218  cf push -f manifest-timesheets.yml 
+  219  ./gradlew clean build;
+  220  ./gradlew clean build;
+  221  git status
+  222  git diff
+  223  git diff
+  224  git status
+  225  git add .;git commit -m "Auth Server";git push;
+  226  ./gradlew clear build
+  227  ./gradlew clean build
+  228  ./gradlew clean build
+  229  git add .;git commit -m "Auth Server";git push;
+  230  ./gradlew clean build
+  231  git log
+  232  git log | grep 0579df9b681c501bca074c38323363467c061a61
+  233  git status
+  234  git add .
+  235  git commit -m "Refactoring"
+  236  git push
+  237  git status
+  238  git add .
+  239  git commit -m "Break Build with Wrong SSO Version in Build.gradle"
+  240  git push
+  241  cd ..
+  242  git clone https://github.com/lineshmehta5/tracker-config.git
+  243  ls
+  244  cd tracker-config/
+  245  git init
+  246  git remote add origin git@github.com:lineshmehta5/tracker-config.git
+  247  touch application.properties
+  248  vi application.properties 
+  249  registration.server.endpoint=http://registration-server
+  250  security.user.name=actuator
+  251  clear
+  252  git add .; git commit -m "Add Props"; git push
+  253  cd ..
+  254  cd ~/Downloads/
+  255  ls
+  256  ls -la
+  257  cd apache-tomee-webprofile-7.0.4/
+  258  ls
+  259  clear
+  260  ./bin/catalina.sh run
+  261  exit
+  262  cd workspace/assignment-submission/
+  263  ./gradlew cloudNativeDeveloperDistributedSystemWithSecurity     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/
+  264  ./gradlew cloudNativeDeveloperDistributedSystemWithSecurity     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/
+  265  ./gradlew cloudNativeDeveloperDistributedSystemWithSecurity     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/     -PactuatorUsername=actuator     -PactuatorPassword=operations4red
+  266  ./gradlew cloudNativeDeveloperDistributedSystemWithConfigServer     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/     -PactuatorUsername=actuator     -PactuatorPassword=operations4red
+  267  ./gradlew replatformingSpringBootification -PmovieFunUrl=https://moviefun-sleepy-wolf.apps.cumuluslabs.io
+  268  ./gradlew replatformingManagingDataSources -PmovieFunUrl=https://moviefun-sleepy-wolf.apps.cumuluslabs.io
+  269  ./gradlew replatformingManagingDataSources -PmovieFunUrl=https://moviefun-sleepy-wolf.apps.cumuluslabs.io
+  270  ./gradlew replatformingRemovingReadsFromFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  271  ./gradlew replatformingRemovingReadsFromFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  272  ./gradlew replatformingRemovingReadsFromFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  273  cd ~/workspace/assignment-submission
+  274  ./gradlew replatformingRemovingPersistenceToFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  275  ./gradlew replatformingLogging -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  276  ./gradlew replatformingBackgroundJobsWithDb -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  277  ./gradlew replatformingBackgroundJobsWithDb -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  278  ./gradlew r replatformingBackgroundJobsWithAmqp -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  279  ./gradlew replatformingBackgroundJobsWithAmqp -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  280  netstat -a
+  281  netstat -a > ports.txt
+  282  ifconfig
+  283  minio server /data
+  284  pwd
+  285  cd workspace/
+  286  ;s
+  287  ls
+  288  cd apps-movie-fun-modernization-code/
+  289  minio server /data
+  290  minio server data
+  291  cd ..
+  292  ls
+  293  cd k8s-mastery/
+  294  ls
+  295  cd sa-frontend/
+  296  npm run build
+  297  cd ..
+  298  ;s
+  299  ls
+  300  cd sa-logic/
+  301  ls
+  302  clear
+  303  python -m pip install -r requirements.txt
+  304  brew install pip
+  305  brew uninstall pythons
+  306  brew uninstall python
+  307  brew install python
+  308  python -m pip install -r requirements.txt
+  309  curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  310  pip install -U pip
+  311  python get-pip.py
+  312  pip install -U pip
+  313  pip
+  314  sudo pip install -U pip
+  315  sudo python get-pip.py
+  316  python -m pip install -r requirements.txt
+  317  pwd
+  318  ls -lr
+  319  cd sa/
+  320  sl
+  321  ls
+  322  python -m pip install -r requirements.txt
+  323  sudp python -m pip install -r requirements.txt
+  324  sudo python -m pip install -r requirements.txt
+  325  python -m textblob.download_corpora
+  326  sudo python sentiment_analysis.py
+  327  ls
+  328  pwd
+  329  cd ~/workspace/
+  330  ls
+  331  cd apps-movie-fun-modernization-code/
+  332  git status
+  333  git add .
+  334  git status
+  335  git checkout -b multipleJars
+  336  git add .;git commit -m "Multiple Jars"
+  337  git push
+  338      git push --set-upstream origin multipleJars
+  339  clear
+  340  git checkout microservices-start
+  341  ./gradlew clean build
+  342  ./gradlew clean build -x test
+  343  pwd
+  344  ./gradlew clean build -x test
+  345  ./gradlew clean
+  346  rm -rf *.class
+  347  find . -name "*.class" -type f
+  348  clear
+  349  ls -l
+  350  cd applications/
+  351  ls
+  352  cd movie-fun-app/
+  353  ls
+  354  cd out
+  355  ls
+  356  rm -rf production/
+  357  cd ~/workspace/apps-movie-fun-modernization-code/
+  358  ls
+  359  find . -name "*.class" -type f -delete
+  360  clear
+  361  ls -l
+  362  ./gradlew clean build
+  363  ls -la
+  364  cd applications/
+  365  ls
+  366  rm /Users/nss_admin/workspace/apps-movie-fun-modernization-code/applications/movie-fun-app/src/main/java/org/superbiz/moviefun/HomeController.java
+  367  ./gradlew clean build
+  368  pwd
+  369  cd ..
+  370  ./gradlew clean build
+  371  ./gradlew clean build -x test
+  372  ./gradlew bootRun --parallel
+  373  minio server data
+  374  pkill
+  375  ls
+  376  clear
+  377  pwd
+  378  pwd
+  379  git status
+  380  git clean -fd
+  381  ls
+  382  git status
+  383  git reset --hard
+  384  git status
+  385  git checkout security-start
+  386  pwd
+  387  clear
+  388  ls
+  389  pwd
+  390  clear
+  391  ls -lk
+  392  ./gradlew clean
+  393  find . -type D -name "*build" -delete
+  394  find . -type D -name "*build" -delete
+  395  find . -type d -name "*build" -delete
+  396  find . -type d -name "*build"
+  397  find . -type d -name "**/.build*"
+  398  find . -type d -name "**/build*"
+  399  find . -type d -name "**/build"
+  400  pwd
+  401  find . -type d -name build*
+  402  find . -type d -name build
+  403  find . -type d -name .build
+  404  find . -type d -name 
+  405  ls
+  406  find . -type d -name components
+  407  find . -type d -name build
+  408  find . -type d -name **build
+  409  find . -type d -name **.build
+  410  find . -type d -name **/build
+  411  rm -rf **/build*
+  412  printf '%s\n' ./build* 
+  413  printf '%s\n' ./**build* 
+  414  printf '%s\n' **build* 
+  415  printf '%s\n' ./**build* 
+  416  find . -type d -name '*.class' | xargs rm -r
+  417  ind . -name "*.class"
+  418  find . -name "*.class"
+  419  pwd
+  420  grep -rl *.class
+  421  find . -name '*.class'
+  422  find . -name 'build'
+  423  find . -name '**/build'
+  424  find . -name '**/.build'
+  425  find . -name '**build'
+  426  find -L . -name '**build'
+  427  pwd
+  428  ./gradlew clean build -x test;cf push
+  429  ./gradlew clean build -x test;cf target -s sandbox; cf push
+  430  ./gradlew clean build -x test;cf target -s sandbox; cf push
+  431  cf push
+  432  cf push
+  433  pwd
+  434  vi manifest.yml 
+  435  pwd
+  436  view manifest.yml 
+  437  view manifest.yml 
+  438  pwd
+  439  view /Users/nss_admin/workspace/apps-movie-fun-modernization-code/manifest.yml
+  440  cd /Users/nss_admin/workspace/apps-movie-fun-modernization-code
+  441  pwd
+  442  view /Users/nss_admin/workspace/apps-movie-fun-modernization-code/manifest.yml
+  443  ./gradlew clean build -x test;cf push
+  444  cf push
+  445  cd ../assignment-submission/;./gradlew modernizationSecurity -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io/ -PuaaUsername=user -PuaaPassword=keepitsimple
+  446  ./gradlew modernizationSecurity -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io/ -PuaaUsername=user -PuaaPassword=keepitsimple
+  447  cd ..
+  448  ls
+  449  cd apps-movie-fun-modernization-code/
+  450  ./gradlew clean build -x test bootRun --parallel
+  451  ./gradlew clean build -x test bootRun --parallel
+  452  pwd
+  453  clear
+  454  pwd
+  455  cd ..
+  456  ls
+  457  cd assignment-submission/
+  458  ./gradlew modernizationMicroservices -PmovieFunUrl=http://movie-fun-app-talkative-manatee.apps.cumuluslabs.io
+  459  cd ..
+  460  ls
+  461  cd apps-movie-fun-modernization-code/
+  462  clear
+  463  cf logs movie-fun-app
+  464  cf logs movie-fun-app
+  465  cf restage movie-fun-app
+  466  cf logs movie-fun-app
+  467  clear
+  468  pwd
+  469  git status
+  470  git stash
+  471  git checkout master
+  472  clear
+  473  git status
+  474  git clean -df
+  475  clear
+  476  git checkout service-discovery-start
+  477  clear
+  478  pwd
+  479  ./gradlew clean build -x test
+  480  ./gradlew clean build -x test
+  481  ./gradlew clean build -x test
+  482  pwd
+  483  cf push
+  484  pwd
+  485  clear
+  486  cd ..
+  487  ls
+  488  cd apps-movie-fun-modernization-code/
+  489  git status
+  490  git stash
+  491  clear
+  492  git status
+  493  git clean -fd
+  494  git checkout config-server-start
+  495  clear
+  496  ls
+  497  pwd
+  498  vi config-server.json
+  499  view config-server.json 
+  500  view config-server.json 
+  501  view config-server.json 
+  502  cf service
+  503  cf create service
+  504  cf help
+  505  cf services
+  506  cf create-service p-config-server movie-fun-config -c config-server.json 
+  507  cf marketplace -s p-config-server
+  508  cf create-service -c config-server.json p-config-server standard config-server
+  509  ./gradlew clean build -x test
+  510  cf push
+  511  clear
+  512  git status
+  513  git stash
+  514  git tags
+  515  git tag
+  516  git statsu
+  517  git status
+  518  git clean -f
+  519  git clean -fd
+  520  cd ..
+  521  ls
+  522  mkdir cmp
+  523  cp -r apps-movie-fun-modernization-code/ cmp/
+  524  git tag
+  525  pwd
+  526  cd apps-movie-fun-modernization-code/
+  527  git tag
+  528  git checkout circuit-breaker-solution
+  529  cd ../cmp/
+  530  cd applications/
+  531  ls
+  532  cd ..
+  533  ls
+  534  git
+  535  git statsu
+  536  git status
+  537  git checkout circuit-breaker-start
+  538  cd ..
+  539  pwd
+  540  cd apps-movie-fun-modernization-code/
+  541  clear
+  542  pwd
+  543  ./gradlew clean build -x test
+  544  cf push
+  545  history
+  546  history >> ~/unixcommands.txt 
+    1  cd workspace/
+    2  ls
+    3  cd assignment-submission/
+    4  ./gradlew cloudNativeDeveloperSimpleApp -PserverUrl=http://pal-tracker-lm.apps.cumuluslabs.io
+    5  ./gradlew cloudNativeDeveloperCloudFoundry -PserverUrl=http://pal-tracker-lm.apps.cumuluslabs.io
+    6  ls -la ../pal-tracker/
+    7  /gradlew cloudNativeDeveloperPipelines -PreviewUrl=https://lm-pal-tracker-review.apps.cumuluslabs.io -PproductionUrl=https://lm-pal-tracker.apps.cumuluslabs.io
+    8  ls
+    9  ./gradlew cloudNativeDeveloperPipelines -PreviewUrl=https://lm-pal-tracker-review.apps.cumuluslabs.io -PproductionUrl=https://lm-pal-tracker.apps.cumuluslabs.io
+   10  ./gradlew cloudNativeDeveloperRest -PserverUrl=https:http://lm-pal-tracker-review.apps.cumuluslabs.io/
+   11  ./gradlew cloudNativeDeveloperRest -PserverUrl=https://lm-pal-tracker-review.apps.cumuluslabs.io/
+   12  ./gradlew cloudNativeDeveloperRest -PserverUrl=https://lm-pal-tracker-review.apps.cumuluslabs.io/
+   13  history
+   14  cd workspace/
+   15  ls
+   16  cd pal-tracker/
+   17  ./gradlew bootRun
+   18  ./gradlew bootRun
+   19  clear
+   20  git status
+   21  git diff
+   22  git add .
+   23  git commit -m "Refactoring"
+   24  git push
+   25  git cherry-pick migration-start
+   26  mkdir -p databases/tracker
+   27  cd databases/tracker/;touch create_databases.sql
+   28  msql -u root
+   29  mysql -u root
+   30  mysql.server start
+   31  mysql -u root
+   32  mysql
+   33  mysql -uroot < databases/tracker/create_databases.sql
+   34  pwd
+   35  cd ..
+   36  ls
+   37  cd ..
+   38  ls
+   39  mysql -uroot < databases/tracker/create_databases.sql
+   40  flyway -url="jdbc:mysql://localhost:3306/tracker_dev" -locations=filesystem:databases/tracker clean migrate
+   41  flyway -url="jdbc:mysql://localhost:3306/tracker_test" -locations=filesystem:databases/tracker clean migrate
+   42  flyway -url="jdbc:mysql://localhost:3306/tracker_test" -locations=filesystem:databases/tracker clean migrate
+   43  flyway -url="jdbc:mysql://localhost:3306/tracker_test" -locations=filesystem:databases/tracker clean migrate
+   44  flyway -url="jdbc:mysql://localhost:3306/tracker_test" -locations=filesystem:databases/tracker clean migrate
+   45  msql -u root
+   46  mysql -u root
+   47  flyway -url="jdbc:mysql://localhost:3306/tracker_test" -locations=filesystem:databases/tracker clean migrate
+   48  cd /Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist 
+   49  ls /Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist 
+   50  ls /Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist 
+   51  ls -l /Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist 
+   52  cf target -s review
+   53  cf target -s review
+   54  cf target -s review
+   55  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   56  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   57  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   58  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   59  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   60  git status
+   61  git add .
+   62  git commit -m "DB Migration Excercise"
+   63  git push
+   64  git status
+   65  git add .
+   66  git commit -m "Corrected App Name"
+   67  git push
+   68  cf apps
+   69  ls -la
+   70  cf push -f manifest-review.yml 
+   71  cf logs pal-tracker --recent
+   72  ./gradlew clean build
+   73  cf push -f manifest-review.yml 
+   74  cf target -t -s production
+   75  cf target -s production
+   76  cf push -f manifest-production.yml 
+   77  cf target -s sandbox
+   78  cf push -f manifest-sandbox.yml 
+   79  git status
+   80  git add .
+   81  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   82  git status
+   83  git commit -m "Add Pipeline for Sandbox"
+   84  git push
+   85  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   86  git status
+   87  git add .
+   88  git commit -m "Update pipeline"
+   89  git push
+   90  fly -t pal-concourse destroy-pipeline -p pal-tracker
+   91  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+   92  fly -t pal-concourse unpause-pipeline -p pal-tracker
+   93  git status
+   94  ls
+   95  mkdir dump
+   96  cd dump
+   97  touch dump1.tmp
+   98  cd ..
+   99  ls
+  100  git add .
+  101  git commit -m "to trigger build"
+  102  git push
+  103  git status
+  104  fly -t pal-concourse destroy-pipeline -p pal-tracker
+  105  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+  106  fly -t pal-concourse unpause-pipeline -p pal-tracker
+  107  fly -t pal-concourse destroy-pipeline -p pal-tracker
+  108  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+  109  fly -t pal-concourse unpause-pipeline -p pal-tracker
+  110  fly -t pal-concourse destroy-pipeline -p pal-tracker
+  111  fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.yml -c ci/pipeline.yml
+  112  fly -t pal-concourse unpause-pipeline -p pal-tracker
+  113  clear
+  114  git status
+  115  git add .
+  116  git commit -m "Update pipeline"
+  117  git push
+  118  git cherry-pick jdbc-start
+  119  ./gradlew clean build
+  120  git status
+  121  git add .
+  122  git commit -m "JDBC Assignment"
+  123  git push
+  124  ./gradlew clean build
+  125  git status
+  126  ls
+  127  cd dump/
+  128  ls
+  129  touch dump2.tmp
+  130  cd ..
+  131  git add .
+  132  git commit -m "commit to trigger build"
+  133  cf target -s production
+  134  cf logs pal-tracker 
+  135  git log
+  136  git push
+  137  git cherry-pick actuator-start
+  138  ./gradlew clean build
+  139  ./gradlew clean build
+  140  cf target
+  141  cf set-env pal-tracker MANAGEMENT_SECURITY_ENABLED false
+  142  cf restage pal-tracker
+  143  cf restage pal-tracker
+  144  mysql.server start
+  145  cd workspace/pal-tracker-distributed/
+  146  cf push -f manifest-registration.yml 
+  147  cf push -f manifest-registration.yml 
+  148  cd workspace/pal-tracker-distributed/
+  149  cf push manifest-backlog.yml 
+  150  cd workspace/pal-tracker-distributed/
+  151  cf push manifest-backlog.yml 
+  152  cf push -f manifest-backlog.yml 
+  153  cf push -f manifest-registration.yml.yml 
+  154  cf push -f manifest-registration.yml
+  155  git status
+  156  cf push -f manifest-registration.yml
+  157  cd workspace/pal-tracker-distributed/
+  158  ./gradlew platform-services:eureka-server:bootRun
+  159  cd workspace/pal-tracker-distributed/
+  160  ./gradlew platform-services:eureka-server:bootRun
+  161  ./gradlew platform-services:eureka-server:bootRun
+  162  git status
+  163  git status
+  164  git add .
+  165  git status
+  166  pwd
+  167  git add *
+  168  git status
+  169  git status
+  170  git status
+  171  git add .
+  172  git commit -m "Missing files pushed";git push
+  173  ls -la
+  174  clear
+  175  ls
+  176  cd workspace/
+  177  ls
+  178  cd pal-tracker-distributed/
+  179  clear
+  180  ./gradlew clean build
+  181  ./gradlew clean build
+  182  ./gradlew clean build
+  183  ./gradlew clean build
+  184  git status
+  185  git status
+  186  ./gradlew clean build
+  187  git status
+  188  git status
+  189  git add .
+  190  git status
+  191  git commit -m "OAuth Added"
+  192  git push
+  193  cf m
+  194  git status
+  195  git add .
+  196  git commit -m "OAuth Added, Manifest Files Updated"
+  197  git push
+  198  git status
+  199  git status
+  200  git commit -m "OAuth Added, Manifest Files Updated"
+  201  git add .
+  202  git commit -m "OAuth Added, Manifest Files Updated"
+  203  git push
+  204  ./gradlew clean build
+  205  git status
+  206  vi ci/dump.tmp 
+  207  history
+  208  cf logs tracker-timesheets --recent
+  209  ls
+  210  cf push -f manifest-timesheets.yml 
+  211  cf logs tracker-timesheets --recent
+  212  git status
+  213  git status
+  214  git add .; git commit -m "Add props for reg server endpoint"
+  215  git push
+  216  cf push -f manifest-timesheets.yml 
+  217  cf push -f manifest-timesheets.yml 
+  218  cf push -f manifest-timesheets.yml 
+  219  ./gradlew clean build;
+  220  ./gradlew clean build;
+  221  git status
+  222  git diff
+  223  git diff
+  224  git status
+  225  git add .;git commit -m "Auth Server";git push;
+  226  ./gradlew clear build
+  227  ./gradlew clean build
+  228  ./gradlew clean build
+  229  git add .;git commit -m "Auth Server";git push;
+  230  ./gradlew clean build
+  231  git log
+  232  git log | grep 0579df9b681c501bca074c38323363467c061a61
+  233  git status
+  234  git add .
+  235  git commit -m "Refactoring"
+  236  git push
+  237  git status
+  238  git add .
+  239  git commit -m "Break Build with Wrong SSO Version in Build.gradle"
+  240  git push
+  241  cd ..
+  242  git clone https://github.com/lineshmehta5/tracker-config.git
+  243  ls
+  244  cd tracker-config/
+  245  git init
+  246  git remote add origin git@github.com:lineshmehta5/tracker-config.git
+  247  touch application.properties
+  248  vi application.properties 
+  249  registration.server.endpoint=http://registration-server
+  250  security.user.name=actuator
+  251  clear
+  252  git add .; git commit -m "Add Props"; git push
+  253  cd ..
+  254  cd ~/Downloads/
+  255  ls
+  256  ls -la
+  257  cd apache-tomee-webprofile-7.0.4/
+  258  ls
+  259  clear
+  260  ./bin/catalina.sh run
+  261  exit
+  262  cd workspace/assignment-submission/
+  263  ./gradlew cloudNativeDeveloperDistributedSystemWithSecurity     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/
+  264  ./gradlew cloudNativeDeveloperDistributedSystemWithSecurity     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/
+  265  ./gradlew cloudNativeDeveloperDistributedSystemWithSecurity     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/     -PactuatorUsername=actuator     -PactuatorPassword=operations4red
+  266  ./gradlew cloudNativeDeveloperDistributedSystemWithConfigServer     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/     -PactuatorUsername=actuator     -PactuatorPassword=operations4red
+  267  ./gradlew replatformingSpringBootification -PmovieFunUrl=https://moviefun-sleepy-wolf.apps.cumuluslabs.io
+  268  ./gradlew replatformingManagingDataSources -PmovieFunUrl=https://moviefun-sleepy-wolf.apps.cumuluslabs.io
+  269  ./gradlew replatformingManagingDataSources -PmovieFunUrl=https://moviefun-sleepy-wolf.apps.cumuluslabs.io
+  270  ./gradlew replatformingRemovingReadsFromFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  271  ./gradlew replatformingRemovingReadsFromFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  272  ./gradlew replatformingRemovingReadsFromFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  273  cd ~/workspace/assignment-submission
+  274  ./gradlew replatformingRemovingPersistenceToFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  275  ./gradlew replatformingLogging -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  276  ./gradlew replatformingBackgroundJobsWithDb -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  277  ./gradlew replatformingBackgroundJobsWithDb -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  278  ./gradlew r replatformingBackgroundJobsWithAmqp -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  279  ./gradlew replatformingBackgroundJobsWithAmqp -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  280  netstat -a
+  281  netstat -a > ports.txt
+  282  ifconfig
+  283  lsof -i:8080
+  284  ps-ef|grep nginx
+  285  ps -ef|grep nginx
+  286  LS
+  287  ls
+  288  cd workspace/
+  289  ls
+  290  cd new
+  291  mkdir new
+  292  cd new
+  293  git clone 
+  294  git clone 
+  295  git clone https://github.com/platform-acceleration-lab/apps-movie-fun-modernization-code.git
+  296  ./gradlew clean build -x test
+  297  cd apps-movie-fun-modernization-code/
+  298  ./gradlew clean build -x test
+  299  ls -lr
+  300  git checkout microservices-solution
+  301  ./gradlew clean build -x test
+  302  ls -l
+  303  vi manifest.yml 
+  304  vi manifest.yml 
+  305  cf push
+  306  lsof -i:8080
+  307  pkill java
+  308  pwd
+  309  ./gradlew bootRun --parallel
+  310  pkill java
+  311  ps -ef|grep java
+  312  ./gradlew bootRun --parallel
+  313  mysql -u root
+  314  mysql -uroot -e "show databases" | grep -v Database | grep -v mysql| grep -v information_schema| gawk '{print "drop database " $1 ";select sleep(0.1);"}' | mysql -uroot
+  315  mysql
+  316  mysql -u root
+  317  mysql -u root
+  318  mysql -u root
+  319  mysql -u89s5Auj1AjUsvtXl -h127.0.0.1 -P63306 -p5JRrnhZHLCbj7wPJ -e"SHOW DATABASES;"
+  320  mysql -u89s5Auj1AjUsvtXl -h127.0.0.1 -P63306 -p5JRrnhZHLCbj7wPJ -e"SHOW DATABASES;"
+  321  mysql -u89s5Auj1AjUsvtXl -h127.0.0.1 -P63306 -p5JRrnhZHLCbj7wPJ -e"SHOW DATABASES;"
+  322  mysql -u89s5Auj1AjUsvtXl -h127.0.0.1 -P63306 -p5JRrnhZHLCbj7wPJ -e"SHOW DATABASES;"
+  323  mysql -u89s5Auj1AjUsvtXl -h127.0.0.1 -P63306 -p5JRrnhZHLCbj7wPJ -e"SHOW DATABASES;"
+  324  mysql -u89s5Auj1AjUsvtXl -h127.0.0.1 -P63306 -p5JRrnhZHLCbj7wPJ -e"SHOW DATABASES;"
+  325  mysql -u89s5Auj1AjUsvtXl -h127.0.0.1 -P63306 -p5JRrnhZHLCbj7wPJ -e"SHOW DATABASES;"
+  326  CF_MIGRATE=true ./gradlew cfMigrate
+  327  pwd
+  328  cd ..
+  329  cd ..
+  330  clear
+  331  pwd
+  332  cd apps-movie-fun-modernization-code/
+  333  CF_MIGRATE=true ./gradlew cfMigrate
+  334  CF_MIGRATE=true ./gradlew cfMigrate clean build
+  335  CF_MIGRATE=true ./gradlew clean build
+  336  CF_MIGRATE=true ./gradlew clean build -x test
+  337  ls -lr
+  338  cf push
+  339  cf push
+  340  aws configure
+  341  ls
+  342  cf target -s production
+  343  cf push
+  344  aws configure
+  345  source ~/.bashrc
+  346  echo "source ~/workspace/apps-movie-fun-modernization-code/.env" >> ~/.bashrc
+  347  source ~/.bashrc
+  348  echo "source ~/workspace/apps-movie-fun-modernization-code/.env" >> ~/.bashrc
+  349  source ~/.bashrc
+  350  ./gradlew bootRun --parallel
+  351  env
+  352  echo "source ~/workspace/apps-movie-fun-modernization-code/.env" >> ~/.bashrc
+  353  env
+  354  view .env
+  355  echo "source ~/workspace/apps-movie-fun-modernization-code/.env" > ~/.bashrc
+  356  source ~./bashrc
+  357  source ~./bashrc
+  358  echo "source ~/workspace/apps-movie-fun-modernization-code/.env" >> ~/.bashrc
+  359  source ~./bashrc
+  360  env
+  361  env | grep vcap
+  362  export VCAP_SERVICES="{\"aws-s3\": [{\"credentials\": {\"access_key_id\": \"${MINIO_ACCESS_KEY:04ULKW1SEDAW24A0DPP1}\", \"bucket\": \"movie-fun-course\", \"secret_access_key\": \"${MINIO_SECRET_ACCESS_KEY:?missing}\"}, \"label\": \"aws-s3\", \"name\": \"moviefun-s3\"}]}"
+  363  env | grep vcap
+  364  export VCAP_SERVICES="{\"aws-s3\": [{\"credentials\": {\"access_key_id\": \"${MINIO_ACCESS_KEY:?missing}\", \"bucket\": \"movie-fun-course\", \"secret_access_key\": \"${MINIO_SECRET_ACCESS_KEY:?missing}\"}, \"label\": \"aws-s3\", \"name\": \"moviefun-s3\"}]}"
+  365  env | grep vcap
+  366  curl -k "https://p-identity.login.system.cumuluslabs.io/oauth/token" -i -u "94ca5870-ab96-480e-968c-9aad607d27be:41533106-88fa-4983-a79c-965d6afca404" -X POST -H 'Accept: application/json' -H 'Content-Type: application/x-www-form-urlencoded' -d 'grant_type=client_credentials&response_type=token'
+  367  curl -k "https://basic-sso.login.system.cumuluslabs.io" -i -u "94ca5870-ab96-480e-968c-9aad607d27be:41533106-88fa-4983-a79c-965d6afca404" -X POST -H 'Accept: application/json' -H 'Content-Type: application/x-www-form-urlencoded' -d 'grant_type=client_credentials&response_type=token'
+  368  cf env LINESH-movie-fun
+  369  cf env LINESH-movie-fun-fun
+  370  cf env LINESH-movie-fun-app
+  371  mysql ssh
+  372  pwd
+  373  ./gradlew cfMigrate
+  374  ACLTUS42928:apps-movie-fun-modernization-code nss_admin$ ./gradlew cfMigrate
+  375  :databases:album-database:openTunnel
+  376  Opening Tunnel
+  377  :databases:album-database:cfMigrate UP-TO-DATE
+  378  :databases:album-database:closeTunnel
+  379  Closing Tunnel
+  380  :databases:movie-database:openTunnel
+  381  Opening Tunnel
+  382  :databases:movie-database:cfMigrate UP-TO-DATE
+  383  :databases:movie-database:closeTunnel
+  384  clear
+  385  cf ssh -N -L 63306:10.0.16.64:3306 album-service
+  386  cf ssh -N -L 63306:10.0.16.64:3306 movie-service
+  387  history
+  388  history >> ~/unixcommands.txt 
+   19  ./gradlew clean build
+   20  git status
+   21  ls
+   22  cd dump/
+   23  ls
+   24  touch dump2.tmp
+   25  cd ..
+   26  git add .
+   27  git commit -m "commit to trigger build"
+   28  cf target -s production
+   29  cf logs pal-tracker 
+   30  git log
+   31  git push
+   32  git cherry-pick actuator-start
+   33  ./gradlew clean build
+   34  ./gradlew clean build
+   35  cf target
+   36  cf set-env pal-tracker MANAGEMENT_SECURITY_ENABLED false
+   37  cf restage pal-tracker
+   38  cf restage pal-tracker
+   39  mysql.server start
+   40  cd workspace/pal-tracker-distributed/
+   41  cf push -f manifest-registration.yml 
+   42  cf push -f manifest-registration.yml 
+   43  cd workspace/pal-tracker-distributed/
+   44  cf push manifest-backlog.yml 
+   45  cd workspace/pal-tracker-distributed/
+   46  cf push manifest-backlog.yml 
+   47  cf push -f manifest-backlog.yml 
+   48  cf push -f manifest-registration.yml.yml 
+   49  cf push -f manifest-registration.yml
+   50  git status
+   51  cf push -f manifest-registration.yml
+   52  cd workspace/pal-tracker-distributed/
+   53  ./gradlew platform-services:eureka-server:bootRun
+   54  cd workspace/pal-tracker-distributed/
+   55  ./gradlew platform-services:eureka-server:bootRun
+   56  ./gradlew platform-services:eureka-server:bootRun
+   57  git status
+   58  git status
+   59  git add .
+   60  git status
+   61  pwd
+   62  git add *
+   63  git status
+   64  git status
+   65  git status
+   66  git add .
+   67  git commit -m "Missing files pushed";git push
+   68  ls -la
+   69  clear
+   70  ls
+   71  cd workspace/
+   72  ls
+   73  cd pal-tracker-distributed/
+   74  clear
+   75  ./gradlew clean build
+   76  ./gradlew clean build
+   77  ./gradlew clean build
+   78  ./gradlew clean build
+   79  git status
+   80  git status
+   81  ./gradlew clean build
+   82  git status
+   83  git status
+   84  git add .
+   85  git status
+   86  git commit -m "OAuth Added"
+   87  git push
+   88  cf m
+   89  git status
+   90  git add .
+   91  git commit -m "OAuth Added, Manifest Files Updated"
+   92  git push
+   93  git status
+   94  git status
+   95  git commit -m "OAuth Added, Manifest Files Updated"
+   96  git add .
+   97  git commit -m "OAuth Added, Manifest Files Updated"
+   98  git push
+   99  ./gradlew clean build
+  100  git status
+  101  vi ci/dump.tmp 
+  102  history
+  103  cf logs tracker-timesheets --recent
+  104  ls
+  105  cf push -f manifest-timesheets.yml 
+  106  cf logs tracker-timesheets --recent
+  107  git status
+  108  git status
+  109  git add .; git commit -m "Add props for reg server endpoint"
+  110  git push
+  111  cf push -f manifest-timesheets.yml 
+  112  cf push -f manifest-timesheets.yml 
+  113  cf push -f manifest-timesheets.yml 
+  114  ./gradlew clean build;
+  115  ./gradlew clean build;
+  116  git status
+  117  git diff
+  118  git diff
+  119  git status
+  120  git add .;git commit -m "Auth Server";git push;
+  121  ./gradlew clear build
+  122  ./gradlew clean build
+  123  ./gradlew clean build
+  124  git add .;git commit -m "Auth Server";git push;
+  125  ./gradlew clean build
+  126  git log
+  127  git log | grep 0579df9b681c501bca074c38323363467c061a61
+  128  git status
+  129  git add .
+  130  git commit -m "Refactoring"
+  131  git push
+  132  git status
+  133  git add .
+  134  git commit -m "Break Build with Wrong SSO Version in Build.gradle"
+  135  git push
+  136  cd ..
+  137  git clone https://github.com/lineshmehta5/tracker-config.git
+  138  ls
+  139  cd tracker-config/
+  140  git init
+  141  git remote add origin git@github.com:lineshmehta5/tracker-config.git
+  142  touch application.properties
+  143  vi application.properties 
+  144  registration.server.endpoint=http://registration-server
+  145  security.user.name=actuator
+  146  clear
+  147  git add .; git commit -m "Add Props"; git push
+  148  cd ..
+  149  cd ~/Downloads/
+  150  ls
+  151  ls -la
+  152  cd apache-tomee-webprofile-7.0.4/
+  153  ls
+  154  clear
+  155  ./bin/catalina.sh run
+  156  exit
+  157  cd workspace/assignment-submission/
+  158  ./gradlew cloudNativeDeveloperDistributedSystemWithSecurity     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/
+  159  ./gradlew cloudNativeDeveloperDistributedSystemWithSecurity     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/
+  160  ./gradlew cloudNativeDeveloperDistributedSystemWithSecurity     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/     -PactuatorUsername=actuator     -PactuatorPassword=operations4red
+  161  ./gradlew cloudNativeDeveloperDistributedSystemWithConfigServer     -PregistrationServerUrl=https://registration-pal-lm.apps.cumuluslabs.io     -PbacklogServerUrl=https://backlog-pal-lm.apps.cumuluslabs.io     -PallocationsServerUrl=https://allocations-pal-lm.apps.cumuluslabs.io     -PtimesheetsServerUrl=https://timesheets-pal-lm.apps.cumuluslabs.io/     -PactuatorUsername=actuator     -PactuatorPassword=operations4red
+  162  ./gradlew replatformingSpringBootification -PmovieFunUrl=https://moviefun-sleepy-wolf.apps.cumuluslabs.io
+  163  ./gradlew replatformingManagingDataSources -PmovieFunUrl=https://moviefun-sleepy-wolf.apps.cumuluslabs.io
+  164  ./gradlew replatformingManagingDataSources -PmovieFunUrl=https://moviefun-sleepy-wolf.apps.cumuluslabs.io
+  165  ./gradlew replatformingRemovingReadsFromFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  166  ./gradlew replatformingRemovingReadsFromFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  167  ./gradlew replatformingRemovingReadsFromFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io/
+  168  cd ~/workspace/assignment-submission
+  169  ./gradlew replatformingRemovingPersistenceToFileSystem -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  170  ./gradlew replatformingLogging -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  171  ./gradlew replatformingBackgroundJobsWithDb -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  172  ./gradlew replatformingBackgroundJobsWithDb -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  173  ./gradlew r replatformingBackgroundJobsWithAmqp -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  174  ./gradlew replatformingBackgroundJobsWithAmqp -PmovieFunUrl=https://moviefun-empathic-tiger.apps.cumuluslabs.io
+  175  netstat -a
+  176  netstat -a > ports.txt
+  177  ifconfig
+  178  ls
+  179  cd workspace/
+  180  ls
+  181  git clone git@github.com:${YOUR_GITHUB_HANDLE}/apps-platform-acceleration-struts-code.git
+  182  git clone git@github.com:lineshmehta5/apps-platform-acceleration-struts-code.git
+  183  ls
+  184  mv apps-platform-acceleration-struts-code apps-platform-acceleration-struts-code-old
+  185  git clone git@github.com:lineshmehta5/apps-platform-acceleration-struts-code.git
+  186  git clone https://github.com/lineshmehta5/apps-platform-acceleration-struts-code.git
+  187  cd apps-platform-acceleration-struts-code
+  188  git checkout modernize-mvc-start
+  189  clear
+  190  ls -l
+  191  cd src/main/java/org/superbiz/struts/
+  192  ls
+  193  rm -rf IndexController.java 
+  194  cd ~/workspace/
+  195  ls
+  196  cd apps-platform-acceleration-struts-code
+  197  clear
+  198  mysql.server start 
+  199  mysql
+  200  mysql -u root
+  201  cd ~/workspace/assignment-submission
+  202  ./gradlew modernizationStrutsToSpring -PstrutsAppUrl=http://localhost:8080
+  203  clear
+  204  ls
+  205  cd ..
+  206  ls
+  207  ls -l
+  208  mkdir archive
+  209  mv -r apps* archive/
+  210  mv apps* archive/
+  211  ls
+  212  ls -lr
+  213  git clone https://github.com/lineshmehta5/apps-movie-fun-modernization-code.git
+  214  gicd apps-movie-fun-modernization-code/
+  215  cd apps-movie-fun-modernization-code/
+  216  clear
+  217  ls
+  218  git checkout gradlization-start
+  219  mysql -uroot -e 'DROP DATABASE IF EXISTS movies; CREATE DATABASE movies;'
+  220  mysql -uroot movies < ~/workspace/apps-movie-fun-modernization-code/db/schema.ddl
+  221  ls -la
+  222  gradle wrapper
+  223  ls -l
+  224  ls -la
+  225  vi .gitignore
+  226  ./gradlew init
+  227  ls
+  228  cd src
+  229  ls
+  230  clear
+  231  ls
+  232  cd..
+  233  ;s
+  234  cd ..
+  235  ls
+  236  clear
+  237  ls -lr
+  238  rm -rf settings.gradle pom.xml gradlew.bat gradlew build.gradle
+  239  ls -lr
+  240  rm -f gradle/
+  241  rm -rf gradle/
+  242  ls lr
+  243  ls -l
+  244  clear
+  245  gradle wrapper
+  246  ls -lr
+  247  ./gradlew init
+  248  ls -l
+  249  git clean 0df
+  250  git clean -df
+  251  git checkout master
+  252  ls -lr
+  253  git checkout gradlization-start
+  254  clear
+  255  ls- la
+  256  ls -la
+  257  git status
+  258  git reset --hard
+  259  git status
+  260  git clean -df
+  261  clear
+  262  git status
+  263  git checkout master
+  264  git status
+  265  git reset --hard
+  266  ls -lr
+  267  clear
+  268  git checkout gradlization-start
+  269  git status
+  270  ls -la
+  271  gradle wrapper
+  272  ./gradlew init
+  273  ./gradlew bootRun
+  274  echo "source ~/workspace/apps-movie-fun-modernization-code/.env" >> ~/.bashrc
+  275  source ~/.bashrc
+  276  ls -lr
+  277  ls -lra
+  278  minio server /data
+  279  brew update minio
+  280  brew upgrade minio
+  281  brew install minio
+  282  brew reinstall minio
+  283  echo "source ~/workspace/apps-movie-fun-modernization-code/.env" >> ~/.bashrc
+  284  source ~/.bashrc
+  285  ./gradlew bootRun
+  286  ls -lr
+  287  pwd
+  288  ls -l
+  289  clear
+  290  ls -lr
+  291  cd build
+  292  ls
+  293  cd ./gradlew build
+  294  pwd
+  295  cd ..
+  296  ./gradlew build
+  297  ls -lr
+  298  clear
+  299  ls -lr
+  300  clear
+  301  pwd
+  302  cf push --help
+  303  cf push moviefun -p build/libs/moviefun-1.1.0-SNAPSHOT.war
+  304  cf push moviefun -p build/libs/moviefun-1.1.0-SNAPSHOT.war -m1G
+  305  cf push moviefun -p build/libs/moviefun-1.1.0-SNAPSHOT.war -m 1G
+  306  cf push moviefun -p build/libs/moviefun-1.1.0-SNAPSHOT.war -m 2GB
+  307  cf push moviefun -p build/libs/moviefun-1.1.0-SNAPSHOT.war -m 1GB -u process
+  308  cf push moviefun -p build/libs/moviefun-1.1.0-SNAPSHOT.war -m 1GB
+  309  ./gradlew bootRun
+  310  cf routes
+  311  msql -u root
+  312  mysql -u root
+  313  cf restage moviefun
+  314  ./gradlew bootRun
+  315  ./gradlew clean build bootRun
+  316  ./gradlew clean bootRun
+  317  ./gradlew clean bootRun -Pchaos-monkey
+  318  pkill jaba
+  319  pkill java
+  320  ./gradlew clean bootRun -Pchaos-monkey
+  321  ./gradlew clean bootRun -Dspring.profiles.active=chaos-monkey
+  322  ./gradlew clean bootRun -Dspring.profiles.active=chaos-monkey
+  323  ./gradlew clean bootRun -Dspring.profiles.active=chaos-monkey
+  324  ./gradlew clean bootRun
+  325  ./gradlew clean bootRun
+  326  ./gradlew dependencies
+  327  ./gradlew dependenciesGraph
+  328  ./gradlew dependenciesGraph
+  329  ./gradlew dependenciesGraph
+  330  ls
+  331  ./gradlew clean build
+  332  cf push movie-fun-app -p applications/movie-fun-app/build/libs/movie-fun-app-1.1.0-SNAPSHOT.war --no-start --random-route
+  333  cf push movie-fun-app -p applications/movie-fun-app/build/libs/movie-fun-app-1.1.0-SNAPSHOT.war --no-start --random-route
+  334  ./gradlew clean build
+  335  ./gradlew clean build
+  336  clar
+  337  clear
+  338  ./gradlew clean build --stacktrace
+  339  ./gradlew clean build --stacktrace
+  340  ./gradlew clean build --stacktrace
+  341  ./gradlew clean build --stacktrace --debug
+  342  ./gradlew clean build --stacktrace --debug --scan
+  343  ./gradlew clean build --stacktrace --debug --scan
+  344  ./gradlew clean build -x test
+  345  cf push movie-fun-app -p applications/movie-fun-app/build/libs/movie-fun-app-1.1.0-SNAPSHOT.war --no-start --random-route
+  346  cf push movie-fun-app -p applications/movie-fun-app/build/libs/movie-fun-app-1.1.0-SNAPSHOT.war
+  347  cf push moviefun -p applications/movie-fun-app/build/libs/movie-fun-app-1.1.0-SNAPSHOT.war
+  348  brew install nginx
+  349  start nginx
+  350  nginx start
+  351  nginx -s 
+  352  nginx start
+  353  nginx stop
+  354  nginx
+  355  nginx help
+  356  nginx
+  357  cd /usr/local/nginx/html
+  358  cd /usr/local/nginx
+  359  where is nginx
+  360  whereis nginx
+  361  ps -ef|grep nginx
+  362  cd /usr/local/etc/nginx/
+  363  ls
+  364  ls -lr
+  365  cd /usr/local/Cellar/nginx/
+  366  ls
+  367  cd 1.15.0/
+  368  ls
+  369  cd html
+  370  ls
+  371  cp -r ~/workspace/k8s-mastery/sa-frontend/build/ .
+  372  ls -lr
+  373  netstat -an | 8080
+  374  netstat -an | grep 8080
+  375  pkill java
+  376  netstat -an | grep 8080
+  377  clear
+  378  lsof -w -n -i tcp:8080
+  379  pwd
+  380  cd ~/workspace/k8s-mastery/
+  381  ls
+  382  cd sa-webapp/
+  383  mvn install
+  384  java -jar sentiment-analysis-web-0.0.1-SNAPSHOT.jar 
+  385  pw
+  386  [wd
+  387  pwd
+  388  ;s
+  389  ls
+  390  java -jar target/sentiment-analysis-web-0.0.1-SNAPSHOT.jar --sa.logic.api.url=http://localhost:5000
+  391  pwd
+  392  pwd
+  393  ls
+  394  cd ..
+  395  ls
+  396  cd ..
+  397  ls
+  398  cd apps-movie-fun-modernization-code/
+  399  idea .
+  400  /usr/local/bin/idea.
+  401  /usr/local/bin/idea .
+  402  pwd
+  403  cf push
+  404  cf push
+  405  cf push
+  406  cf push
+  407  cf push
+  408  cf push
+  409  cd ~/workspace/assignment-submission;./gradlew modernizationMicroservices -PmovieFunUrl=
+  410  cd ..
+  411  ls
+  412  cd ..
+  413  ls
+  414  cd Documents
+  415  ls
+  416  touch ravi.txt
+  417  vi ravi.txt
+  418  fstacks
+  419  cf stacks
+  420  cd ..
+  421  ls
+  422  pwd
+  423  cd ~/workspace/apps-movie-fun-modernization-code/
+  424  ./gradlew clean build -x test
+  425  ./gradlew clean build -x test
+  426  cf push
+  427  cf login
+  428  cf push
+  429  cf mysql
+  430  cf mysql album-database
+  431  ./gradlew bootRun
+  432  pkill java
+  433  ./gradlew bootRun
+  434  pkill java
+  435  ./gradlew bootRun
+  436  mysql -uroot movies < ~/workspace/apps-movie-fun-modernization-code/db/schema.ddl
+  437  mysql -uroot movies < ~/Downloads/schema.ddl 
+  438  ./gradlew bootRun
+  439  mysql -u roo
+  440  mysql -u root
+  441  ./gradlew bootRun
+  442  ./gradlew bootRun
+  443  ./gradlew bootRun --parallel
+  444  ./gradlew clean build -x test; cf push
+  445  cf mysql album-database
+  446  ./gradlew clean build -x test; cf push
+  447  ./gradlew clean build -x test
+  448   cf push
+  449  ./gradlew clean build -x test
+  450  ./gradlew clean build -x test
+  451  cf push
+  452  ./gradlew clean build -x test
+  453  cf push
+  454  ./gradlew clean build -x test;cf push
+  455  pwd
+  456  ls -lr
+  457  cd ..
+  458  ls
+  459  cd new
+  460  clear
+  461  git status
+  462  cd apps-movie-fun-modernization-code/
+  463  git status
+  464  git diff
+  465  git diff
+  466  git diff
+  467  cd ~/workspace/assignment-submission
+  468  ./gradlew modernizationMicroservices -PmovieFunUrl=https://movie-fun-lm.apps.cumuluslabs.io/
+  469  pwd
+  470  ls
+  471  clear
+  472  pwd
+  473  cd ..
+  474  ls
+  475  mv apps* ./archive/
+  476  mv -r apps* ./archive/
+  477  ls -lr
+  478  mv pal-tracker archive/
+  479  mv pal* archive/*
+  480  ls -lr
+  481  mv prerequisite-code archive/
+  482  move k8s-mastery/ archive/
+  483  mv k8s-mastery/ archive/
+  484  ls -l
+  485  clear
+  486  ls
+  487  mv apps-platform-acceleration-struts-code/ archive/
+  488  mv new/ archive/
+  489  mv tracker-config/ archive/
+  490  ls
+  491  git checkout https://github.com/platform-acceleration-lab/apps-movie-fun-modernization-code.git
+  492  pwd
+  493  git clone  https://github.com/lineshmehta5/apps-movie-fun-modernization-code.git
+  494  git checkout migrations-start
+  495  ls
+  496  cd apps-movie-fun-modernization-code/
+  497  git checkout migrations-start
+  498  cf env album-service
+  499  cf ssh -N -L 63306:10.0.16.64:3306 album-service
+  500  cf ssh -N -L 63306:10.0.16.64:3306 movie-service
+  501  cd workspace/
+  502  cd a
+  503  cd apps-movie-fun-modernization-code/
+  504  clear
+  505  ./gradlew clean build -x test
+  506  ./gradlew cfMigrate
+  507  ./gradlew cfMigrate
+  508  ./gradlew cfMigrate
+  509  ssh -N -L 63306:10.0.16.64:3306
+  510  ssh -N -L 63306:10.0.16.64:3306 movie-service
+  511  cf env album-service
+  512  cf ssh -N -L 63306:10.0.16.64:3306 album-service
+  513  cf push
+  514  cf env
+  515  cf env album-service
+  516  cf ssh -N -L 63306:10.0.16.64:3306 album-service
+  517  cf run-task
+  518  history >> ~/unixcommands.txt 
